@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app-volume
+          mountPath: /usr/share/nginx/html/
+      volumes:
+      - name: app-volume
+        gitRepo:
+          repository: "https://github.com/Schwanenseee/UeK-109-Aufgaben/tree/85a2669f842c17cb57ce54a1ee8a7a8d6cf5281a/UeK-109/Aufgabe_6-2/"
+          revision: master
+          directory: app
