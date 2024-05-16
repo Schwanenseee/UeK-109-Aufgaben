@@ -1,10 +1,10 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-name: nginx-from-github-route
-labels:
-  app: nginx-from-github
-  app.kubernetes.io/part-of: nginx-from-github
+  name: nginx-from-github
+  labels:
+    app: nginx-from-github
+    app.kubernetes.io/part-of: nginx-from-github
 spec:
   to:
     kind: Service
