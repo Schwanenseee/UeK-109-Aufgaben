@@ -1,7 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-from-github
+  labels:
+    app: nginx-from-github
+    app.kubernetes.io/part-of: nginx-from-github
 spec:
   replicas: 1
   selector:
