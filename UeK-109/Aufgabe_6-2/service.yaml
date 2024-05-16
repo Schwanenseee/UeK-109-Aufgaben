@@ -1,7 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+name: nginx-from-github-service
+labels:
+  app: nginx-from-github
+  app.kubernetes.io/part-of: nginx-from-github
 spec:
   selector:
     app: nginx
