@@ -26,6 +26,6 @@ spec:
       volumes:
       - name: app-volume
         gitRepo:
-          repository: "https://github.com/Schwanenseee/UeK-109-Aufgaben/tree/85a2669f842c17cb57ce54a1ee8a7a8d6cf5281a/UeK-109/Aufgabe_6-2/"
+          repository: "https://github.com/Schwanenseee/UeK-109-Aufgaben/"
           revision: master
           directory: app
